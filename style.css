@@ -298,3 +298,11 @@ section > .wrap, .inner > .wrap { position: relative; z-index: 1; }
 .oil-card h3 { color: var(--green); }
 .hero h1 { font-size: clamp(2.1rem, 4.1vw, 3.3rem); line-height: 1.12; }
 .hero h1 { max-width: 19ch; }
+
+/* Polifenol bölümü */
+.br-f { background-image: url(olive-c.webp); aspect-ratio: 640 / 714; width: min(300px, 46vw); right: -110px; bottom: -150px; opacity: 0.6; animation-delay: -6s; }
+.poly-note { margin-top: 2.2rem; background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: var(--radius); padding: 1.3rem 1.5rem; max-width: 70ch; }
+.poly-note h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+.poly-note p { margin: 0 0 0.7rem; font-size: 0.98rem; }
+.poly-note p:last-child { margin-bottom: 0; color: var(--muted); }
+#polifenol .draft { margin-top: 1.4rem; }
