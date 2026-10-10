@@ -290,3 +290,11 @@ section > .wrap, .inner > .wrap { position: relative; z-index: 1; }
 
 /* İç sayfalarda dal metnin üstüne binmesin */
 .inner .br-a { right: -190px; top: -140px; width: min(400px, 60vw); opacity: 0.55; }
+
+/* Yüksek polifenol vurgusu */
+.hp { display: inline-block; margin: 0.2rem 0 0.9rem; padding: 0.38rem 0.85rem; border: 1px solid var(--gold); border-radius: 999px; background: rgba(200, 162, 29, 0.14); color: #6b560a; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.02em; }
+.hero .hp { display: table; }
+.facts .hp-li { font-weight: 600; color: var(--green); }
+.oil-card h3 { color: var(--green); }
+.hero h1 { font-size: clamp(2.1rem, 4.1vw, 3.3rem); line-height: 1.12; }
+.hero h1 { max-width: 19ch; }
