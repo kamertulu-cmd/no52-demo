@@ -9,7 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=6">
+<script>document.documentElement.className += " js";</script>
 </head>
 <body>
   <div class="strip"><div class="wrap"><span class="tag">DEMO TASARIM</span><span>Siparişler şimdilik Trendyol'daki No52 mağazası üzerinden alınıyor.</span></div></div>
@@ -21,6 +22,7 @@
   </header>
   <main>
     <section class="hero">
+      <div class="fx" aria-hidden="true"><span class="caps caps-hero"></span><span class="branch br-a"></span><span class="branch br-b"></span><i class="lf f1"></i><i class="lf f2"></i><i class="lf f3"></i><i class="lf f4"></i><i class="lf f5"></i></div>
       <div class="wrap">
         <div>
           <p class="eyebrow">No52 takviye edici gıdalar</p>
@@ -39,6 +41,7 @@
     </section>
 
     <section id="urunler" class="alt">
+      <div class="fx" aria-hidden="true"><span class="caps"></span><span class="branch br-c"></span></div>
       <div class="wrap">
         <div class="sec-head">
           <h2>Ürünler</h2>
@@ -87,6 +90,7 @@
     </section>
 
     <section id="siparis">
+      <div class="fx" aria-hidden="true"><span class="caps"></span></div>
       <div class="wrap">
         <div class="sec-head">
           <h2>Nasıl sipariş verilir?</h2>
@@ -101,6 +105,7 @@
     </section>
 
     <section class="band">
+      <div class="fx" aria-hidden="true"><span class="caps caps-dark"></span><span class="branch light br-d"></span></div>
       <div class="wrap">
         <div class="sec-head">
           <h2>Etikette ne var?</h2>
@@ -115,6 +120,7 @@
     </section>
 
     <section id="bilgi">
+      <div class="fx" aria-hidden="true"><span class="branch br-e"></span></div>
       <div class="wrap">
         <div class="sec-head">
           <h2>Bilgi Köşesi</h2>
@@ -141,6 +147,7 @@
     </section>
 
     <section id="hakkimizda" class="alt">
+      <div class="fx" aria-hidden="true"><span class="caps"></span><span class="branch br-c"></span></div>
       <div class="wrap about">
         <div>
           <h2 style="font-size:clamp(1.8rem,4vw,2.7rem);margin-bottom:1rem">Hakkımızda</h2>
@@ -155,6 +162,7 @@
     </section>
 
     <section id="iletisim">
+      <div class="fx" aria-hidden="true"><span class="caps"></span></div>
       <div class="wrap">
         <div class="sec-head"><h2>İletişim</h2></div>
         <div class="contact">
@@ -179,5 +187,13 @@
       </ul>
     </div>
   </footer>
+  <div class="gauge" aria-hidden="true">
+    <svg viewBox="0 0 40 124"><defs><clipPath id="bclip"><path d="M16 6H24V14C24 20 33 26 33 40V110Q33 120 23 120H17Q7 120 7 110V40C7 26 16 20 16 14Z"/></clipPath><linearGradient id="oilg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8bd33"/><stop offset="1" stop-color="#b8860b"/></linearGradient></defs>
+    <path class="glass" d="M16 6H24V14C24 20 33 26 33 40V110Q33 120 23 120H17Q7 120 7 110V40C7 26 16 20 16 14Z"/>
+    <g clip-path="url(#bclip)"><g id="oil-level" transform="translate(0 124)"><path class="wave" d="M-40 0q10 -4 20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0V140H-40Z" fill="url(#oilg)"/></g></g>
+    <path class="outline" d="M16 6H24V14C24 20 33 26 33 40V110Q33 120 23 120H17Q7 120 7 110V40C7 26 16 20 16 14Z"/>
+    <rect x="14" y="1" width="12" height="6" rx="1.5" fill="#c8a21d"/></svg>
+  </div>
+  <script src="fx.js?v=1"></script>
 </body>
 </html>

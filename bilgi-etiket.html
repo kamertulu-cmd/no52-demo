@@ -9,7 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=6">
+<script>document.documentElement.className += " js";</script>
 </head>
 <body>
   <div class="strip"><div class="wrap"><span class="tag">DEMO TASARIM</span><span>Siparişler şimdilik Trendyol'daki No52 mağazası üzerinden alınıyor.</span></div></div>
@@ -19,7 +20,8 @@
       <nav class="nav" aria-label="Ana menü"><a href="index.html#urunler">Ürünler</a><a href="bilgi-etiket.html" aria-current="page">Bilgi Köşesi</a><a href="index.html#hakkimizda">Hakkımızda</a><a href="index.html#iletisim">İletişim</a><a class="btn" href="https://www.trendyol.com/no52/natured3k2-d3-ve-k2-vitamini-iceren-takviye-edici-gida-30-softjel-p-1203993000" target="_blank" rel="noopener">Trendyol'da No52</a></nav>
     </div>
   </header>
-  <main>
+  <main class="inner">
+    <div class="fx" aria-hidden="true"><span class="caps"></span><span class="branch br-a"></span></div>
     <div class="wrap">
       <article class="article">
         <p class="crumb" style="padding:0"><a href="index.html">Ana sayfa</a> / <a href="index.html#bilgi">Bilgi Köşesi</a></p>
@@ -55,5 +57,13 @@
       </ul>
     </div>
   </footer>
+  <div class="gauge" aria-hidden="true">
+    <svg viewBox="0 0 40 124"><defs><clipPath id="bclip"><path d="M16 6H24V14C24 20 33 26 33 40V110Q33 120 23 120H17Q7 120 7 110V40C7 26 16 20 16 14Z"/></clipPath><linearGradient id="oilg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8bd33"/><stop offset="1" stop-color="#b8860b"/></linearGradient></defs>
+    <path class="glass" d="M16 6H24V14C24 20 33 26 33 40V110Q33 120 23 120H17Q7 120 7 110V40C7 26 16 20 16 14Z"/>
+    <g clip-path="url(#bclip)"><g id="oil-level" transform="translate(0 124)"><path class="wave" d="M-40 0q10 -4 20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0V140H-40Z" fill="url(#oilg)"/></g></g>
+    <path class="outline" d="M16 6H24V14C24 20 33 26 33 40V110Q33 120 23 120H17Q7 120 7 110V40C7 26 16 20 16 14Z"/>
+    <rect x="14" y="1" width="12" height="6" rx="1.5" fill="#c8a21d"/></svg>
+  </div>
+  <script src="fx.js?v=1"></script>
 </body>
 </html>
