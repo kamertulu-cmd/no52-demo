@@ -70,8 +70,8 @@ a:hover { color: var(--green); }
 .hero .lede { margin-top: 1.25rem; font-size: 1.2rem; color: var(--muted); max-width: 42ch; }
 .hero .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
 .hero-art { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
-.hero-art::before { content: ""; position: absolute; inset: 8% 6% 4% 12%; background: var(--gold); opacity: 0.22; border-radius: 50%; z-index: 0; }
-.hero-art figure { position: relative; z-index: 1; margin: 0; }
+.hero-art::before { content: ""; position: absolute; inset: 8% 6% 4% 12%; background: var(--gold); opacity: 0.22; border-radius: 50%; }
+.hero-art figure { position: relative; margin: 0; }
 .hero-art figure:nth-child(2) { margin-top: 2.2rem; }
 
 .shot { background: var(--bg-2); border-radius: var(--radius); aspect-ratio: 4 / 5; overflow: hidden; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 0.9rem; text-align: center; }
