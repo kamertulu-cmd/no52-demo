@@ -4,12 +4,21 @@
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var level = document.getElementById("oil-level");
   var ticking = false;
+  var fxs = Array.prototype.slice.call(document.querySelectorAll(".fx"));
 
   function update() {
     var max = root.scrollHeight - window.innerHeight;
     var p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
     if (level) level.setAttribute("transform", "translate(0 " + (124 * (1 - p)).toFixed(1) + ")");
-    if (!reduce) root.style.setProperty("--sy", String(Math.round(window.scrollY)));
+    if (!reduce) {
+      root.style.setProperty("--sy", String(Math.round(window.scrollY)));
+      // Her bölümdeki dallar kendi konumuna göre hafifçe kayar (parallax).
+      fxs.forEach(function (fx) {
+        var r = fx.getBoundingClientRect();
+        if (r.bottom < -200 || r.top > window.innerHeight + 200) return;
+        fx.style.setProperty("--py", String(Math.round(r.top + r.height / 2 - window.innerHeight / 2)));
+      });
+    }
     ticking = false;
   }
 

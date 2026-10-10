@@ -200,48 +200,46 @@ section > .wrap, .inner > .wrap { position: relative; z-index: 1; }
   mask-image: linear-gradient(180deg, transparent, #000 18%, #000 82%, transparent);
 }
 .caps-hero {
-  opacity: 0.42;
+  opacity: max(0, calc(0.42 - var(--sy, 0) * 0.0007));
   -webkit-mask-image: linear-gradient(100deg, transparent 22%, #000 68%);
   mask-image: linear-gradient(100deg, transparent 22%, #000 68%);
 }
-.caps-dark { background-image: url(capsules-light.svg); opacity: 0.14; }
 @keyframes drift { to { background-position-x: 520px; } }
 
-/* Zeytin dalı */
+/* Zeytin dalı: gerçek fotoğraf kesitleri */
 .branch {
   position: absolute;
-  width: min(560px, 72vw);
-  aspect-ratio: 570 / 420;
-  background: url(olive-branch.svg) no-repeat center / contain;
-  transform-origin: 5% 82%;
+  background: no-repeat center / contain;
+  transform-origin: 8% 85%;
+  mix-blend-mode: multiply;
+  translate: 0 calc(var(--py, 0) * -0.07px);
   animation: sway 9s ease-in-out infinite alternate;
 }
-.branch.light { background-image: url(olive-branch-light.svg); opacity: 0.32; }
-@keyframes sway { from { rotate: -2deg; } to { rotate: 2.4deg; } }
-.br-a { right: -110px; top: -70px; }
-.br-b { left: -170px; bottom: -150px; width: min(430px, 60vw); transform: scaleX(-1) rotate(-14deg); animation-delay: -4s; opacity: 0.85; }
-.br-c { right: -150px; top: -120px; width: min(440px, 60vw); transform: scaleY(-1) rotate(-4deg); opacity: 0.7; animation-duration: 11s; }
-.br-d { right: -120px; bottom: -110px; width: min(500px, 65vw); }
-.br-e { left: -190px; top: -60px; width: min(430px, 60vw); transform: scaleX(-1); opacity: 0.75; animation-delay: -2s; }
+.br-a { background-image: url(olive-b.webp); aspect-ratio: 760 / 564; width: min(540px, 72vw); right: -90px; top: -60px; opacity: 0.8; }
+.br-b { background-image: url(olive-c.webp); aspect-ratio: 640 / 714; width: min(330px, 50vw); left: -110px; bottom: -150px; opacity: 0.75; animation-delay: -4s; }
+.br-c { background-image: url(olive-a.webp); aspect-ratio: 1 / 1; width: min(400px, 60vw); right: -130px; top: -110px; opacity: 0.7; animation-duration: 11s; }
+.br-d { background-image: url(olive-a.webp); aspect-ratio: 1 / 1; width: min(440px, 62vw); right: -110px; bottom: -120px; mix-blend-mode: normal; opacity: 0.4; }
+.br-e { background-image: url(olive-c.webp); aspect-ratio: 640 / 714; width: min(340px, 50vw); left: -140px; top: -60px; opacity: 0.7; animation-delay: -2s; }
+@keyframes sway { from { rotate: -2.2deg; } to { rotate: 2.4deg; } }
 
-/* Düşen yapraklar */
-.lf { position: absolute; top: -30px; width: 30px; height: 12px; background: url(leaf.svg) no-repeat center / contain; opacity: 0; animation: fall 17s linear infinite; }
-.f1 { left: 12%; animation-delay: -2s; }
-.f2 { left: 34%; animation-delay: -7s; width: 24px; }
-.f3 { left: 58%; animation-delay: -11s; }
-.f4 { left: 76%; animation-delay: -4s; width: 26px; }
-.f5 { left: 90%; animation-delay: -14s; width: 22px; }
+/* Düşen yapraklar: gerçek zeytin yaprağı */
+.lf { position: absolute; top: -30px; width: 52px; height: 16px; background: no-repeat center / contain; opacity: 0; animation: fall 17s linear infinite; }
+.f1 { left: 12%; animation-delay: -2s; background-image: url(leaf-1.webp); }
+.f2 { left: 34%; animation-delay: -7s; width: 42px; background-image: url(leaf-2.webp); }
+.f3 { left: 58%; animation-delay: -11s; background-image: url(leaf-3.webp); }
+.f4 { left: 76%; animation-delay: -4s; width: 46px; background-image: url(leaf-1.webp); }
+.f5 { left: 90%; animation-delay: -14s; width: 38px; background-image: url(leaf-2.webp); }
 @keyframes fall {
   0% { translate: 0 0; rotate: 0deg; opacity: 0; }
-  8% { opacity: 0.85; }
+  8% { opacity: 0.9; }
   50% { translate: 46px 260px; rotate: 140deg; }
-  92% { opacity: 0.85; }
+  92% { opacity: 0.9; }
   100% { translate: -24px 560px; rotate: 320deg; opacity: 0; }
 }
 
-/* Başlık süsü: küçük zeytin dalı */
-.sec-head::before { content: ""; display: block; width: 96px; height: 24px; background: url(sprig.svg) no-repeat left center / contain; margin-bottom: 0.8rem; }
-.band .sec-head::before { background-image: url(sprig-light.svg); }
+/* Başlık süsü: küçük gerçek yaprak */
+.sec-head::before { content: ""; display: block; width: 64px; height: 19px; background: url(leaf-2.webp) no-repeat left center / contain; margin-bottom: 0.8rem; }
+.band .sec-head::before { filter: brightness(2.2) saturate(1.2); }
 
 /* Giriş animasyonu */
 @keyframes rise { from { opacity: 0; translate: 0 18px; } to { opacity: 1; translate: 0 0; } }
@@ -279,7 +277,7 @@ section > .wrap, .inner > .wrap { position: relative; z-index: 1; }
   .gauge { right: 0.6rem; top: auto; bottom: 1rem; translate: none; width: 26px; height: 80px; }
 }
 @media (max-width: 900px) {
-  .branch { opacity: 0.4; }
+  .branch { opacity: 0.45; }
   .br-b, .br-e { display: none; }
   .caps-hero { -webkit-mask-image: none; mask-image: none; opacity: 0.14; }
   .lf.f4, .lf.f5 { display: none; }
@@ -290,4 +288,4 @@ section > .wrap, .inner > .wrap { position: relative; z-index: 1; }
 }
 
 /* İç sayfalarda dal metnin üstüne binmesin */
-.inner .br-a { right: -230px; top: -190px; width: min(440px, 60vw); opacity: 0.6; }
+.inner .br-a { right: -190px; top: -140px; width: min(400px, 60vw); opacity: 0.55; }
